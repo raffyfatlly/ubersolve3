@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2322C55E'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5.14 13.86l-3.64 3.64c-.3.3-.7.5-1.14.5-.44 0-.84-.2-1.14-.5l-3.64-3.64c-.3-.3-.5-.7-.5-1.14 0-.44.2-.84.5-1.14l3.64-3.64c.3-.3.7-.5 1.14-.5.44 0 .84.2 1.14.5l3.64 3.64c.3.3.5.7.5 1.14 0 .44-.2.84-.5 1.14z'/%3E%3C/svg%3E" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agentif by Ubersolve</title>
+    <style>
+      /* Custom styles to override Botpress default theme */
+      .bpw-powered {
+        display: none !important;
+      }
+      .bpw-header-container {
+        background: linear-gradient(to right, #22C55E, #16A34A) !important;
+      }
+      .bpw-chat-container {
+        background-color: #1E293B !important;
+      }
+      .bpw-from-bot .bpw-chat-bubble {
+        background-color: #22C55E !important;
+        color: white !important;
+      }
+      .bpw-from-user .bpw-chat-bubble {
+        background-color: #334155 !important;
+        color: white !important;
+      }
+      .bpw-composer {
+        background-color: #1E293B !important;
+        border-top: 1px solid #334155 !important;
+      }
+      .bpw-send-button {
+        background: #22C55E !important;
+        color: white !important;
+      }
+      .bpw-send-button:hover {
+        background: #16A34A !important;
+      }
+      .bpw-new-messages-indicator {
+        background-color: #22C55E !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2024/11/08/02/20241108023301-TYKBS4FF.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const initBot = () => {
+          if (window.botpressWebChat) {
+            window.botpressWebChat.init({
+              'composerPlaceholder': 'Chat with bot',
+              'botConversationDescription': 'This chatbot was built surprisingly fast with Botpress',
+              'botName': 'Name',
+              'botId': 'f87c4530-e481-49dd-8841-236d83aa1389',
+              'hostUrl': 'https://cdn.botpress.cloud/webchat/v0',
+              'messagingUrl': 'https://messaging.botpress.cloud',
+              'clientId': '3b0a39f3-b083-4c0b-8642-ca2794987a1e',
+              'enableConversationDeletion': true,
+              'showPoweredBy': false,
+              'className': 'webchatIframe',
+              'containerWidth': '100%',
+              'layoutWidth': '100%',
+              'hideWidget': true,
+              'showCloseButton': false,
+              'disableAnimations': true,
+              'closeOnEscape': false,
+              'showConversationsButton': false,
+              'enableTranscriptDownload': false,
+              'theme': 'dark',
+              'themeColor': '#22C55E'
+            });
+          } else {
+            setTimeout(initBot, 100);
+          }
+        };
+        initBot();
+      });
+    </script>
+  </body>
+</html>
